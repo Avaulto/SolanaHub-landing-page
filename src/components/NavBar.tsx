@@ -6,8 +6,8 @@ import { Squeeze as Hamburger } from "hamburger-react"; /// ask amir which anima
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <nav className="bg-white border-gray-200 px-4 sm:px-6 py-2.5 rounded">
+      <div className="container flex flex-wrap justify-between items-center mx-auto  ">
         <a href="#" className="flex items-center">
           <img src={logoText} className="h-10" />
         </a>
