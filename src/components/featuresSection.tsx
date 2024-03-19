@@ -1,6 +1,5 @@
 // import MobileScreenshot from "../assets/mobile-screenshot.png"; // Replace with your actual import
 // import DesktopScreenshot from "../assets/desktop-screenshot.png"; // Replace with your actual import
-import { Quote } from "lucide-react";
 import saftyIcon from "../assets/icons/saftyIcon.svg";
 import composabilityIcon from "../assets/icons/composabilityIcon.svg";
 import explorationIcon from "../assets/icons/explorationIcon.svg";

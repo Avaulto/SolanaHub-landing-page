@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import logoText from "../assets/Logo_text 1.svg";
 import peerlink from "../assets/peerlink.svg";
 
