@@ -1,4 +1,4 @@
-import { MinusCircle, PlusCircle, XCircle } from "lucide-react";
+import { MinusCircle, PlusCircle } from "lucide-react";
 import { useState } from "react";
 
 export const FaqSection = () => {
