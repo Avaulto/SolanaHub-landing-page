@@ -38,34 +38,30 @@ const StatsSection = () => {
         transition={{ ease: "easeIn", duration: 0.7 }}
       >
         <h2 className="text-3xl font-bold text-left mb-4 text-gray-900">Building only on Solana</h2>
-        <p className="text-left mb-12 sm:mb-16 text-gray-600">
-          Everything you need for your everyday Solana activity
-        </p>
+        <p className="text-left mb-12 sm:mb-16 text-gray-600">Everything you need for your everyday Solana activity</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-0 lg:mb-16">
+      <div className="grid grid-cols-1 gap-16 sm:grid-cols-2  mb-0 lg:mb-16">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={controls}
           exit={{ opacity: 0 }}
-          transition={{ ease: "easeIn", duration: 0.5 }}
+          transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center mb-8 sm:mb-0 sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900">2x</span>
+          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center">2x</span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">Hackathons winners</span>
-          <p className="text-center sm:text-left sm:block text-gray-600">
-            Building & improving since 2022
-          </p>
+          <p className="text-center sm:text-left sm:block text-gray-600">Building & improving since 2022</p>
         </motion.div>
 
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={controls}
           exit={{ opacity: 0 }}
-          transition={{ ease: "easeIn", duration: 1 }}
+          transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center mb-8 sm:mb-0 sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900">integrations</span>
+          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center">integrations</span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">
             10+ High end protocols and API providers merging together
           </span>
@@ -78,13 +74,14 @@ const StatsSection = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={controls}
           exit={{ opacity: 0 }}
-          transition={{ ease: "easeIn", duration: 1.5 }}
+          transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center mb-8 sm:mb-0 sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900">+120K</span>
+          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center">+120K</span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">Actions worldwide</span>
           <p className="text-center sm:text-left sm:block text-gray-600">
-            Our free App helps users to stay aware DeFi activity and perform Everything they need directly from SolanaHub
+            Our free App helps users to stay aware DeFi activity and perform Everything they need directly from
+            SolanaHub
           </p>
         </motion.div>
 
@@ -92,13 +89,16 @@ const StatsSection = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={controls}
           exit={{ opacity: 0 }}
-          transition={{ ease: "easeIn", duration: 2 }}
+          transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900">Network guardians</span>
-          <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">Solana validator since solana inception</span>
+          <span className="text-5xl sm:text-6xl text-center font-bold text-gray-900">Network guardians</span>
+          <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">
+            Solana validator since solana inception
+          </span>
           <p className="text-center sm:text-left sm:block text-gray-600">
-          As Solana validators since testnet, we're seasoned experts in the platform's development on Solana ecosystem and really love what we do. 
+            As Solana validators since testnet, we're seasoned experts in the platform's development on Solana ecosystem
+            and really love what we do.
           </p>
         </motion.div>
       </div>
