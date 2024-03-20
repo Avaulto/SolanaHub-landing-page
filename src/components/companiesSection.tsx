@@ -21,7 +21,9 @@ const PartnerSection = () => {
           {/* Repeat for other logos */}
         </div>
       </div>
+      
     </section>
+
   );
 };
 
