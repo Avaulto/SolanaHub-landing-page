@@ -43,7 +43,7 @@ export const FaqSection = () => {
     }
   };
   return (
-    <section className="mx-5  py-8 bg-white">
+    <section className="px-6  py-24 bg-white">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl text-Grey-900 font-semibold text-center mb-6">Frequently asked questions</h2>
         <p className="text-xl text-Grey-600 text-center mb-16">

@@ -10,3 +10,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.utilityItem {
+  transition: border-color 0.7s ease;
+}

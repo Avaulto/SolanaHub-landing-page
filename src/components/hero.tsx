@@ -1,10 +1,17 @@
+import { motion } from "framer-motion";
 import heroAnimation from "../assets/lottie/heroAnimation.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const HeroSection = () => {
   return (
     <section className="bg-white px-4 pt-16 md:pt-24 lg:px-8 ">
-      <div className="mx-auto max-w-md md:max-w-4xl text-center  border-b border-Grey-300  ">
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "easeIn", duration: 0.7 }}
+        className="mx-auto max-w-md md:max-w-4xl text-center  border-b border-Grey-300  "
+      >
         <h1 className="text-4xl font-bold text-gray-900 mb-4 md:text-6xl">The motherboard aggregator</h1>
         <p className="mb-8 text-gray-600 max-w-sm md:max-w-3xl mx-auto">
           Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted
@@ -27,7 +34,7 @@ const HeroSection = () => {
             style={{ height: "auto" }} // Height will scale automatically
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

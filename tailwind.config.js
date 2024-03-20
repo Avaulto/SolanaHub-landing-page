@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        custom: "0 10px 15px -3px rgba(255, 100, 100, 0.5), 0 4px 6px -2px rgba(255, 100, 100, 0.25)", // Example shadow color and strength
+        utility: "5px 0 5px -2px rgba(0,0,0,0.3), -5px 0 5px -2px rgba(0,0,0,0.3), 0 -5px 5px -2px rgba(0,0,0,0.3)", // Example shadow color and strength
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

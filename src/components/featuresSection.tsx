@@ -1,13 +1,44 @@
-// import MobileScreenshot from "../assets/mobile-screenshot.png"; // Replace with your actual import
-// import DesktopScreenshot from "../assets/desktop-screenshot.png"; // Replace with your actual import
+import MobileScreenshot from "../assets/mobile-screenshot.png";
+import DesktopScreenshot from "../assets/desktop-screenshot.png";
+import MobileScreenshotSm from "../assets/mobile-screenshot-sm.png";
 import saftyIcon from "../assets/icons/saftyIcon.svg";
 import composabilityIcon from "../assets/icons/composabilityIcon.svg";
 import explorationIcon from "../assets/icons/explorationIcon.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const FeaturesSection = () => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            controls.start({ x: 0, opacity: 1 });
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [controls]);
   return (
-    <section className="flex flex-col justify-center items-center  px- py-14 md:py-24 lg:px-8 ">
-      <div className="bg-primary-200 py-1 px-3 rounded-full inline-block mb-4">
+    <section ref={ref} className="flex flex-col justify-center items-center   py-14 md:py-24 lg:px-8 ">
+      <div className="bg-primary-200 py-1 px-3 rounded-full inline-block mb-4 ">
         <h1 className="font-medium text-primary text-lg text-center">Features</h1>
       </div>
 
@@ -18,7 +49,42 @@ const FeaturesSection = () => {
         Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by
         over 4,000 startups.
       </p>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 ">
+      <div className="hidden md:flex justify-center justify-items-center items-center relative">
+        <motion.img
+          src={MobileScreenshot}
+          alt="Phone"
+          initial={{ x: "-100vw", opacity: 0 }} // Start off-screen to the left
+          animate={controls}
+          transition={{ type: "spring", stiffness: 25 }}
+          className=" max-w-60 z-10" // Use z-index to ensure the phone overlaps the desktop
+        />
+        <motion.img
+          src={DesktopScreenshot}
+          alt="Desktop"
+          initial={{ x: "100vw", opacity: 0 }} // Start off-screen to the right
+          animate={controls}
+          transition={{ type: "spring", stiffness: 25 }}
+          className=" max-w-3xl -ml-20" // Negative margin to create the overlap effect
+        />
+      </div>
+      <div className="flex w-full bg-Grey-50 md:hidden justify-center items-center relative pt-8 mb-14">
+        <motion.img
+          src={MobileScreenshotSm}
+          alt="mobile"
+          initial={{ x: 20, opacity: 0 }} // Start centered and invisible
+          animate={controls}
+          transition={{ type: "spring", stiffness: 25 }}
+          className="max-w-60 self-center " // Ensure the image is centered without negative margins
+        />
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={controls}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "easeIn", duration: 2.25 }}
+        className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-48 "
+      >
         <FeatureIcon
           title="Composability"
           des="Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop."
@@ -34,7 +100,7 @@ const FeaturesSection = () => {
           des="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
           icon={explorationIcon}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
