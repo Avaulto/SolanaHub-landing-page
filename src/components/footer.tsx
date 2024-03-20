@@ -1,6 +1,6 @@
 import logoText from "../assets/Logo_text 1.svg";
 import xTwitter from "../assets/icons/x-twitter.svg";
-import discord from "../assets/icons/x-twitter.svg";
+import discord from "../assets/icons/discord.png";
 // ... import other logos similarly
 
 const Footer = () => {
@@ -31,11 +31,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-8">
           <p className="text-gray-600 text-sm">&copy; 2024 SolanaHub. All rights reserved.</p>
           <div className="flex space-x-4">
-            <a href="https://docs.solanahub.app/solanahub/solanahub-terms-and-conditions" className="text-gray-600 hover:text-gray-900 text-sm">
+            <a
+              href="https://docs.solanahub.app/solanahub/solanahub-terms-and-conditions"
+              className="text-gray-600 hover:text-gray-900 text-sm"
+            >
               Terms
             </a>
-           
-           
           </div>
         </div>
       </div>

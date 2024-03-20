@@ -30,7 +30,7 @@ const StatsSection = () => {
     };
   }, [controls]);
   return (
-    <section ref={ref} className="bg-gray-200 px-6 md:px-12 py-16 sm:py-24 sm:px-16 lg:px-56">
+    <section ref={ref} className="bg-gray-200 px-6 md:px-12 py-16 sm:py-24 sm:px-16 xl:px-56">
       <motion.div
         initial={{ opacity: 0 }}
         animate={controls}

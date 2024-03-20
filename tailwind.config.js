@@ -39,7 +39,7 @@ export default {
           900: "#52346f",
           950: "#371c4f",
         },
-        Grey: {
+        Gray: {
           50: "#F8FAFC",
           100: "#EEF2F6",
           200: "#E3E8EF",
