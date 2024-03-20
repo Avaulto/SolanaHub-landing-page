@@ -81,8 +81,9 @@ const FeaturesSection = () => {
         Make your everyday task from 1 centralize location
       </h1>
       <p className="mb-16 text-center text-gray-600 max-w-sm md:max-w-3xl mx-auto">
-        Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by
-        over 4,000 startups.
+        
+Powerful, self-managed, approved only through transactions from your wallet. 
+A hub environment for all your activities.
       </p>
       <div className="hidden md:flex justify-center justify-items-center items-center relative mb-12">
         <motion.img

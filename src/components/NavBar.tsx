@@ -59,9 +59,12 @@ function NavBar() {
             </li>
           </ul>
         </div>
+        <a href="https://solanahub.app">
+
         <button className="hidden md:inline-block bg-primary justify-center rounded-lg py-3 px-5 text-center text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300">
           Launch the App
         </button>
+        </a>
       </div>
     </nav>
   );

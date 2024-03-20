@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import utilitySwap from "../assets/utility-swap.png";
+import utilityOverview from "../assets/utility-overview.png";
 import utilityStake from "../assets/utility-stake.png";
+import utilitySwap from "../assets/utility-swap.png";
+import utilityDao from "../assets/utility-dao.png";
 import "../index.css";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { ArrowLeft, ArrowRight, PlayCircle } from "lucide-react";
@@ -11,29 +13,29 @@ export const UtilitiesSection = () => {
       id: 0,
       name: "Asset Overview",
       content:
-        "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
-      icon: utilitySwap,
+        "Assuming you have the following: numerous tokens, hundreds of NFTs, and significant exposure to DeFi. Now, imagine being able to engage with everything in one place - that's SolanaHub.",
+      icon: utilityOverview,
     },
     {
       id: 1,
-      name: "Stake your Crypto",
+      name: "Stake your SOL",
       content:
-        "An all-in-one customer service platform that helps you balance everything your customers need to be happy.",
+        "Our features make staking a breeze, whether you're into native or liquid options. Say goodbye to complicated processes and hello to easy, rewarding earnings. ",
       icon: utilityStake,
     },
     {
       id: 2,
-      name: "DAO Management",
+      name: "DeFi Participation",
       content:
-        "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
+        "Rest easy knowing that our platform enforces strict standards, ensuring you access only the safest DeFi options. We integrate high liquidity, high volume, and audited protocols, prioritizing your safety above all else. Your peace of mind is our top priority.",
       icon: utilitySwap,
     },
     {
       id: 3,
-      name: "DeFi Participation",
+      name: "DAO Management",
       content:
-        "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
-      icon: utilityStake,
+        "Stay informed and empowered about your government's actions, impact, and influence. Take control and actively participate in shaping the future. Make a difference right from SolanaHub.",
+      icon: utilityDao,
     },
   ];
 
@@ -121,8 +123,7 @@ export const UtilitiesSection = () => {
             The only platform you'll ever need. Simple.
           </h1>
           <p className="md:mb-4 text-xl text-grey-600">
-            Spend smarter, lower your bills, get cashback on everything you buy, and unlock credit to grow your
-            business.
+           Explore smarter, find your way into solana best to offer all from one platform
           </p>
         </motion.div>
         <motion.div
@@ -132,9 +133,7 @@ export const UtilitiesSection = () => {
           transition={{ ease: "easeIn", duration: 0.8 }}
           className="hidden xl:flex xl:flex-row gap-4"
         >
-          <button className="bg-white border-grey-300 border-2 rounded-lg py-3 px-5 text-md text-grey-600 font-semibold hover:bg-grey-100 transition-colors duration-300">
-            Contact
-          </button>
+         
           <button className="bg-primary rounded-lg py-3 px-5 text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300">
             Launch dApp
           </button>

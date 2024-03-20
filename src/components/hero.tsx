@@ -14,16 +14,19 @@ const HeroSection = () => {
       >
         <h1 className="text-4xl font-bold text-gray-900 mb-4 md:text-6xl">The motherboard aggregator</h1>
         <p className="mb-8 text-gray-600 max-w-sm md:max-w-3xl mx-auto">
-          Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted
-          by over 4,000 startups.
+        Transforming the Solana experience, our ultimate onboarding platform simplifies, secures, and enriches your journey into the Solana ecosystem, ensuring accessibility and enjoyment every step of the way.
         </p>
         <div className="flex flex-col space-y-3 mx-4 md:flex-row-reverse md:space-y-0 md:justify-center sm:mb-4 md:mb-0">
+        <a href="https://solanahub.app">
           <button className="w-full md:w-auto md:ml-4 bg-primary justify-center rounded-lg py-3 px-5 text-center text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300">
             Launch the App
           </button>
+          </a>
+          <a href="https://discord.gg/8W2qehB32j" target="_blank">
           <button className="w-full md:w-auto bg-white border-Grey-300 border-2 justify-center rounded-lg py-3 px-5 text-center text-md text-Grey-600 font-semibold hover:bg-Grey-100 transition-colors duration-300">
-            Book a demo
+            Ask us personally
           </button>
+          </a>
         </div>
         <div className="w-full flex justify-center drop-shadow-2xl ">
           <Player

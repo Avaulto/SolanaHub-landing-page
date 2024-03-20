@@ -1,44 +1,43 @@
 import { useRef } from "react";
-import firstFeedback from "../assets/feedback-1.png";
+import firstFeedback from "../assets/hothead.webp";
+import secondFeedback from "../assets/smb.jpeg";
+import thirdFeedback from "../assets/0xBeni_spartan.webp";
+import forthFeedback from "../assets/feedback-1.png";
+import fiveFeedback from "../assets/bruno.jpeg";
+
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const FeedbackSection = () => {
   const items = [
     {
       id: 0,
-      name: "Rich Wilson",
+      name: "suckmyleghair",
       image: firstFeedback,
-      feedback: "“We’ve really sped up our workflow using Untitled.”",
+      feedback: "“Solanahub offers me a unified view on my crypto assets, including NFTs, coins, and more.“",
     },
     {
       id: 1,
-      name: "Rich Wilson",
-      image: firstFeedback,
-      feedback: "“We’ve really sped up our workflow using Untitled.”",
+      name: "Irfan",
+      image: secondFeedback,
+      feedback: "“Never had such an intuitive way to track my staking activity“",
     },
     {
       id: 2,
-      name: "Rich Wilson",
-      image: firstFeedback,
+      name: "Bruno",
+      image: fiveFeedback,
       feedback: "“We’ve really sped up our workflow using Untitled.”",
     },
     {
       id: 3,
-      name: "Rich Wilson",
-      image: firstFeedback,
-      feedback: "“We’ve really sped up our workflow using Untitled.”",
+      name: "Orin",
+      image: forthFeedback,
+      feedback: "“SolanaHub simplify solana native feature as 🤏“ - peerlink",
     },
     {
       id: 4,
-      name: "Rich Wilson",
-      image: firstFeedback,
-      feedback: "“We’ve really sped up our workflow using Untitled.”",
-    },
-    {
-      id: 5,
-      name: "Rich Wilson",
-      image: firstFeedback,
-      feedback: "“We’ve really sped up our workflow using Untitled.”",
+      name: "0xbeni",
+      image: thirdFeedback,
+      feedback: "“Solana needed a product where manlets can explore all the possibilities of the chain.“",
     },
   ];
 

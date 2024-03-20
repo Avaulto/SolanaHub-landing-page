@@ -4,34 +4,32 @@ import { useState } from "react";
 export const FaqSection = () => {
   const faqs = [
     {
-      question: "Is there a free trial available?",
+      question: "What does SolanaHub offer?",
       answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        `we offer veraity of utils such as: User dashboard overview for assets like native sol, SPL(tokens),NFTs and defi. 
+        DAO control & DeFi protocols integrations out of the box`,
     },
     {
-      question: "Is there a free trial available?",
+      question: "Is it safe to use SolanaHub?",
       answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        `Yes, Our users connect to our app using 3rd party wallet that stores & handle your permission for any action,
+         meaning that we can not perform any event without the user approving it. on top of that, our app is 100% open-source and you can verify every piece of code
+          before executing any procedure our github repo: https://github.com/avaulto/solanahub`,
     },
     {
-      question: "Is there a free trial available?",
+      question: "Whats SolanaHub core business?",
       answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        `
+        For the past three years, we've been operating as a Solana validator, using the income to fuel our ongoing development efforts. If you'd like to support our cause,
+         we'd greatly appreciate it if you stake with us. 
+         Together, we can continue to grow and innovate on the Solana network.
+        `,
     },
+
     {
-      question: "Is there a free trial available?",
+      question: "Is SolanaHub is free?",
       answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
-    },
-    {
-      question: "Is there a free trial available?",
-      answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
-    },
-    {
-      question: "Is there a free trial available?",
-      answer:
-        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        "Yes, our hub is public good product and created to empower solana users!",
     },
   ];
   const [selectedFaqIndex, setSelectedFaqIndex] = useState(-1);
@@ -47,7 +45,7 @@ export const FaqSection = () => {
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl text-Grey-900 font-semibold text-center mb-6">Frequently asked questions</h2>
         <p className="text-xl text-Grey-600 text-center mb-16">
-          Everything you need to know about the product and billing.
+          Everything you need to know about SolanaHub
         </p>
         <ul>
           {faqs.map((faq, index) => (
