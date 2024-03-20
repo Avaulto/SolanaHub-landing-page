@@ -25,13 +25,13 @@ const FeedbackSection = () => {
       id: 2,
       name: "Bruno",
       image: fiveFeedback,
-      feedback: "“We’ve really sped up our workflow using Untitled.”",
+      feedback: "“SolanaHub loyalty league boosted my staking rewards with ease. ty!”",
     },
     {
       id: 3,
       name: "Orin",
       image: forthFeedback,
-      feedback: "“SolanaHub simplify solana native feature as 🤏“ - peerlink",
+      feedback: "“SolanaHub simplify solana native features like 🤏“ - peerlink",
     },
     {
       id: 4,
