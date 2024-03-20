@@ -9,7 +9,9 @@ import { useEffect, useRef } from "react";
 
 const FeaturesSection = () => {
   const controls = useAnimation();
+  const controls2 = useAnimation();
   const ref = useRef(null);
+  const featuresRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,15 +31,48 @@ const FeaturesSection = () => {
     if (ref.current) {
       observer.observe(ref.current);
     }
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
+    }
 
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
       }
+      if (featuresRef.current) {
+        observer.unobserve(featuresRef.current);
+      }
     };
   }, [controls]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            controls2.start({ x: 0, opacity: 1 });
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
+    }
+
+    return () => {
+      if (featuresRef.current) {
+        observer.unobserve(featuresRef.current);
+      }
+    };
+  }, [controls2]);
+
   return (
-    <section ref={ref} className="flex flex-col justify-center items-center   py-14 md:py-24 lg:px-8 ">
+    <section ref={ref} className="overflow-x-hidden flex flex-col justify-center items-center py-14 md:py-24 lg:px-8">
       <div className="bg-primary-200 py-1 px-3 rounded-full inline-block mb-4 ">
         <h1 className="font-medium text-primary text-lg text-center">Features</h1>
       </div>
@@ -49,7 +84,7 @@ const FeaturesSection = () => {
         Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by
         over 4,000 startups.
       </p>
-      <div className="hidden md:flex justify-center justify-items-center items-center relative">
+      <div className="hidden md:flex justify-center justify-items-center items-center relative mb-12">
         <motion.img
           src={MobileScreenshot}
           alt="Phone"
@@ -64,7 +99,7 @@ const FeaturesSection = () => {
           initial={{ x: "100vw", opacity: 0 }} // Start off-screen to the right
           animate={controls}
           transition={{ type: "spring", stiffness: 25 }}
-          className=" max-w-3xl -ml-20" // Negative margin to create the overlap effect
+          className=" max-w-3xl -ml-20 " // Negative margin to create the overlap effect
         />
       </div>
       <div className="flex w-full bg-Grey-50 md:hidden justify-center items-center relative pt-8 mb-14">
@@ -79,10 +114,11 @@ const FeaturesSection = () => {
       </div>
 
       <motion.div
+        ref={featuresRef}
         initial={{ opacity: 0 }}
-        animate={controls}
+        animate={controls2}
         exit={{ opacity: 0 }}
-        transition={{ ease: "easeIn", duration: 2.25 }}
+        transition={{ ease: "easeIn", duration: 2 }}
         className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-48 "
       >
         <FeatureIcon

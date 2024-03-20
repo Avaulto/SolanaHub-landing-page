@@ -1,13 +1,13 @@
 import { useState } from "react";
-import logoText from "../assets/Logo_text 1.svg";
+import logoText from "../assets/Logo_text 1.png";
 import "../index.css";
 import { Squeeze as Hamburger } from "hamburger-react"; /// ask amir which animation he wants .
 
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="sticky bg-white border-gray-200 px-4 sm:px-6 py-2.5 rounded">
-      <div className="container flex flex-wrap justify-between items-center mx-auto  ">
+    <nav className="fixed top-0 z-20 w-full bg-white border-gray-200 px-4 sm:px-6 py-5 rounded">
+      <div className="container flex flex-wrap justify-between items-center mx-auto">
         <a href="#" className="flex items-center">
           <img src={logoText} className="h-10" />
         </a>

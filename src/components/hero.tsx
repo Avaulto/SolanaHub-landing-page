@@ -4,7 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white px-4 pt-16 md:pt-24 lg:px-8 ">
+    <section className="bg-white px-4 pt-32 md:pt-40 lg:px-8 ">
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

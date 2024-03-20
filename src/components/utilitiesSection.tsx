@@ -126,10 +126,10 @@ export const UtilitiesSection = () => {
           </p>
         </motion.div>
         <motion.div
-          //   initial={{ opacity: 0 }}
-          //   animate={controls}
-          //   exit={{ opacity: 0 }}
-          //   transition={{ ease: "easeIn", duration: 0.8 }}
+          initial={{ opacity: 0 }}
+          animate={controls}
+          exit={{ opacity: 0 }}
+          transition={{ ease: "easeIn", duration: 0.8 }}
           className="hidden xl:flex xl:flex-row gap-4"
         >
           <button className="bg-white border-grey-300 border-2 rounded-lg py-3 px-5 text-md text-grey-600 font-semibold hover:bg-grey-100 transition-colors duration-300">
@@ -186,7 +186,7 @@ export const UtilitiesSection = () => {
             onClick={() => {
               const newIndex = activeIndex === 0 ? utilities.length - 1 : activeIndex - 1;
               setActiveIndex(newIndex);
-              controls.start({ y: 0, opacity: 1 });
+              controls.start({ y: 30, opacity: 0 }); // Reset animation controls
             }}
             size={22}
             className="text-gray-600"
@@ -195,7 +195,7 @@ export const UtilitiesSection = () => {
             onClick={() => {
               const newIndex = (activeIndex + 1) % utilities.length;
               setActiveIndex(newIndex);
-              controls.start({ y: 0, opacity: 1 });
+              controls.start({ y: 30, opacity: 0 }); // Reset animation controls
             }}
             size={22}
             className="text-gray-600"
@@ -219,8 +219,8 @@ export const UtilitiesSection = () => {
         <div className="containr gap-4 justify-center flex flex-row pb-12 px-6  ">
           <motion.button
             initial={{ opacity: 0 }}
-            animate={controls}
             exit={{ opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ ease: "circInOut", duration: 1.5 }}
             className="bg-primary rounded-lg py-3 w-full text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300"
           >
@@ -228,8 +228,8 @@ export const UtilitiesSection = () => {
           </motion.button>
           <motion.button
             initial={{ opacity: 0 }}
-            animate={controls}
             exit={{ opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ ease: "circInOut", duration: 1.5 }}
             className="bg-white flex gap-2 flex-row justify-center border-grey-300 border-2 rounded-lg py-3 w-full  text-md text-grey-600 font-semibold hover:bg-grey-100 transition-colors duration-300"
           >
@@ -238,17 +238,15 @@ export const UtilitiesSection = () => {
           </motion.button>
         </div>
         <div className="relative w-full  bg-gray-200 pt-16 px-6 flex rounded-md overflow-hidden">
-          <AnimatePresence mode="popLayout">
-            <motion.img
-              key={utilities[activeIndex].id}
-              initial={{ y: 30, opacity: 0 }}
-              animate={controls}
-              exit={{ opacity: 0 }}
-              transition={{ ease: "circInOut", duration: 0.7 }}
-              src={utilities[activeIndex].icon}
-              alt="Utility Icon"
-            />
-          </AnimatePresence>
+          <motion.img
+            key={utilities[activeIndex].name} // This triggers re-animation
+            initial={{ y: 30, opacity: 0 }} // Slightly increase for performance
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ opacity: 0 }} // Only fade out without moving might be smoother
+            transition={{ ease: "circInOut", duration: 0.7 }} // Shorten for snappiness
+            src={utilities[activeIndex].icon}
+            alt="Utility mobile icon"
+          />
         </div>
       </div>
     </section>
