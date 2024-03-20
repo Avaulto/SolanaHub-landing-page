@@ -1,6 +1,6 @@
 // import logoText from "../assets/Logo_text 1.svg";
 // import jupLogo from "../assets/jup.png";
-import marinadeLogo from "../assets/marinade.svg"
+import tritonLogo from "../assets/triton.png"
 import sanctumLogo from "../assets/sanctum.svg";
 import realmsLogo from "../assets/realms.webp";
 import allDomainLogo from "../assets/alldomain.svg"
@@ -14,7 +14,7 @@ const PartnerSection = () => {
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {/* <img src={meteoraLogo} alt="meteoraLogo" className="h-12 mx-auto img-dy" /> */}
           <img src={allDomainLogo} alt="allDomainLogo" className="h-12 mx-auto img-dy" />
-          <img src={marinadeLogo} alt="marinadeLogo" className="h-12 mx-auto img-dy" />
+          <img src={tritonLogo} alt="tritonLogo" className="h-12 mx-auto img-dy" />
           <img src={sanctumLogo} alt="sanctumLogo" className="h-12 mx-auto img-dy" />
           <img src={realmsLogo} alt="realmsLogo" className="h-12 mx-auto img-dy" />
           <img src={kaminoLogo} alt="kaminoLogo" style={{'mix-blend-mode': 'exclusion'} as any} className="h-12 mx-auto img-dy" />
