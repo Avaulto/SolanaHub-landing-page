@@ -124,17 +124,18 @@ A hub environment for all your activities.
       >
         <FeatureIcon
           title="Composability"
-          des="Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop."
+          des="Creating a place where multiple dApps collaborate together in a unified environment."
           icon={composabilityIcon}
         />
         <FeatureIcon
           title="Safety"
-          des="An all-in-one customer service platform that helps you balance everything your customers need to be happy."
+          des="
+          Creating a place where only the best of Solana can gain entry."
           icon={saftyIcon}
         />
         <FeatureIcon
           title="Exploration"
-          des="Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
+          des="Providing you with access to all the latest trends and narratives as soon as they become available."
           icon={explorationIcon}
         />
       </motion.div>

@@ -30,7 +30,7 @@ function NavBar() {
                 className="block py-2 pr-4 pl-3 text-Grey-600 text-base font-semibold  md:bg-transparent md:p-0 hover:text-Grey-950 transition-colors duration-200"
                 aria-current="page"
               >
-                Home
+                {/* Home */}
               </a>
             </li>
             <li>
@@ -38,7 +38,7 @@ function NavBar() {
                 href="#"
                 className="block py-2 pr-4 pl-3 text-Grey-600 text-base font-semibold  md:bg-transparent md:p-0 hover:text-Grey-950 transition-colors duration-200"
               >
-                Products
+                {/* Products */}
               </a>
             </li>
             <li>
@@ -46,7 +46,7 @@ function NavBar() {
                 href="#"
                 className="block py-2 pr-4 pl-3 text-Grey-600 text-base font-semibold  md:bg-transparent md:p-0 hover:text-Grey-950 transition-colors duration-200"
               >
-                Resources
+                {/* Resources */}
               </a>
             </li>
             <li>
@@ -54,7 +54,7 @@ function NavBar() {
                 href="#"
                 className="block py-2 pr-4 pl-3 text-Grey-600 text-base font-semibold  md:bg-transparent md:p-0 hover:text-Grey-950 transition-colors duration-200"
               >
-                Pricing
+                {/* Pricing */}
               </a>
             </li>
           </ul>
