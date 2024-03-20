@@ -77,7 +77,7 @@ const FeedbackSection = () => {
   };
 
   return (
-    <section className="px-6 md:px-12 py-16 sm:py-24 sm:px-16 lg:pl-56">
+    <section className="px-6 md:px-12 py-16 sm:py-24 sm:px-16 xl:pl-56">
       <div>
         <h2 className="text-3xl font-bold text-left mb-4 text-gray-900">Don’t just take our word for it</h2>
         <p className="text-left mb-12 sm:mb-16 text-gray-600">

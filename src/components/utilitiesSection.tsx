@@ -111,7 +111,7 @@ export const UtilitiesSection = () => {
 
   return (
     <section ref={sectionRef} className="flex flex-col justify-center items-center px-0 py-14 md:py-24 lg:px-8 ">
-      <div className="container mx-auto md:px-12 py-8 flex justify-between items-start mb-2 md:mb-16 px-6 ">
+      <div className="container mx-auto xl:px-12 py-8 flex justify-between items-start mb-2 md:mb-16 px-6 ">
         <motion.div
           //   initial={{ opacity: 0 }}
           //   animate={controls}
@@ -123,7 +123,7 @@ export const UtilitiesSection = () => {
             The only platform you'll ever need. Simple.
           </h1>
           <p className="md:mb-4 text-xl text-grey-600">
-           Explore smarter, find your way into solana best to offer all from one platform
+            Explore smarter, find your way into solana best to offer all from one platform
           </p>
         </motion.div>
         <motion.div
@@ -133,7 +133,6 @@ export const UtilitiesSection = () => {
           transition={{ ease: "easeIn", duration: 0.8 }}
           className="hidden xl:flex xl:flex-row gap-4"
         >
-         
           <button className="bg-primary rounded-lg py-3 px-5 text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300">
             Launch dApp
           </button>
@@ -144,7 +143,7 @@ export const UtilitiesSection = () => {
         // animate={controls}
         // exit={{ opacity: 0 }}
         // transition={{ ease: "easeIn", duration: 1.5 }}
-        className="container mx-auto hidden md:flex flex-row space-x-8 px-12 items-center justify-between"
+        className="container mx-auto hidden xl:flex flex-row space-x-8 px-12 items-center justify-between"
       >
         <div className="flex flex-col">
           {utilities.map((utility, index) => (
@@ -164,7 +163,7 @@ export const UtilitiesSection = () => {
           ))}
         </div>
         <div className="relative  bg-gray-200 pt-16 px-16 flex rounded-md overflow-hidden">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             <motion.img
               key={utilities[activeIndex].name} // This triggers re-animation
               initial={{ y: 30, opacity: 0 }} // Slightly increase for performance
@@ -173,18 +172,19 @@ export const UtilitiesSection = () => {
               transition={{ ease: "circInOut", duration: 0.7 }} // Shorten for snappiness
               src={utilities[activeIndex].icon}
               alt="Utility Icon"
-              className="h-96"
+              className="h-96 "
             />
           </AnimatePresence>
         </div>
       </motion.div>
 
-      <div className="container mx-auto md:hidden  items-center justify-between">
+      <div className="container mx-auto xl:hidden  items-center justify-between">
         <div className="flex flex-row px-6 gap-2 mb-4 justify-start">
           <ArrowLeft
             onClick={() => {
               const newIndex = activeIndex === 0 ? utilities.length - 1 : activeIndex - 1;
               setActiveIndex(newIndex);
+              setIntervalDelay((prevDelay) => (prevDelay !== 5000 ? 5000 : prevDelay - 1));
               controls.start({ y: 30, opacity: 0 }); // Reset animation controls
             }}
             size={22}
@@ -194,6 +194,7 @@ export const UtilitiesSection = () => {
             onClick={() => {
               const newIndex = (activeIndex + 1) % utilities.length;
               setActiveIndex(newIndex);
+              setIntervalDelay((prevDelay) => (prevDelay !== 5000 ? 5000 : prevDelay - 1));
               controls.start({ y: 30, opacity: 0 }); // Reset animation controls
             }}
             size={22}
@@ -236,16 +237,18 @@ export const UtilitiesSection = () => {
             Demo
           </motion.button>
         </div>
-        <div className="relative w-full  bg-gray-200 pt-16 px-6 flex rounded-md overflow-hidden">
-          <motion.img
-            key={utilities[activeIndex].name} // This triggers re-animation
-            initial={{ y: 30, opacity: 0 }} // Slightly increase for performance
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ opacity: 0 }} // Only fade out without moving might be smoother
-            transition={{ ease: "circInOut", duration: 0.7 }} // Shorten for snappiness
-            src={utilities[activeIndex].icon}
-            alt="Utility mobile icon"
-          />
+        <div className="relative w-full  bg-gray-200 pt-16 px-6 md:px-48 flex rounded-md overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={utilities[activeIndex].name} // This triggers re-animation
+              initial={{ y: 30, opacity: 0 }} // Slightly increase for performance
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ opacity: 0 }} // Only fade out without moving might be smoother
+              transition={{ ease: "circInOut", duration: 0.7 }} // Shorten for snappiness
+              src={utilities[activeIndex].icon}
+              alt="Utility mobile icon"
+            />
+          </AnimatePresence>
         </div>
       </div>
     </section>
