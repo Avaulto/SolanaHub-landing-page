@@ -81,9 +81,8 @@ const FeaturesSection = () => {
         Make your everyday task from 1 centralize location
       </h1>
       <p className="mb-16 text-center text-gray-600 max-w-sm md:max-w-3xl mx-auto">
-        
-Powerful, self-managed, approved only through transactions from your wallet. 
-A hub environment for all your activities.
+        Powerful, self-managed, approved only through transactions from your wallet. A hub environment for all your
+        activities.
       </p>
       <div className="hidden md:flex justify-center justify-items-center items-center relative mb-12">
         <motion.img
@@ -119,7 +118,7 @@ A hub environment for all your activities.
         initial={{ opacity: 0 }}
         animate={controls2}
         exit={{ opacity: 0 }}
-        transition={{ ease: "easeIn", duration: 2 }}
+        transition={{ ease: "easeIn", duration: 1.25 }}
         className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-48 "
       >
         <FeatureIcon

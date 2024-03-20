@@ -49,7 +49,7 @@ const StatsSection = () => {
           transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center mb-8 sm:mb-0 sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center">2x</span>
+          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center md:text-left ">2x</span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">Hackathons winners</span>
           <p className="text-center sm:text-left sm:block text-gray-600">Building & improving since 2022</p>
         </motion.div>
@@ -61,7 +61,7 @@ const StatsSection = () => {
           transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center mb-8 sm:mb-0 sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center">integrations</span>
+          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center md:text-left ">integrations</span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">
             10+ High end protocols and API providers merging together
           </span>
@@ -77,7 +77,7 @@ const StatsSection = () => {
           transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center mb-8 sm:mb-0 sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center">+120K</span>
+          <span className="text-5xl sm:text-6xl font-bold text-gray-900 text-center md:text-left ">+120K</span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">Actions worldwide</span>
           <p className="text-center sm:text-left sm:block text-gray-600">
             Our free App helps users to stay aware DeFi activity and perform Everything they need directly from
@@ -92,7 +92,9 @@ const StatsSection = () => {
           transition={{ ease: "easeIn", duration: 1.25 }}
           className="flex flex-col items-center sm:items-start"
         >
-          <span className="text-5xl sm:text-6xl text-center font-bold text-gray-900">Network guardians</span>
+          <span className="text-5xl sm:text-6xl  font-bold text-gray-900 text-center md:text-left">
+            Network guardians
+          </span>
           <span className="mt-4 text-lg font-semibold text-center sm:text-left text-gray-900">
             Solana validator since solana inception
           </span>
