@@ -2,7 +2,7 @@ import { useState } from "react";
 import logoText from "../assets/Logo_text 1.png";
 import "../index.css";
 import { Squeeze as Hamburger } from "hamburger-react"; /// ask amir which animation he wants .
-
+import va from '@vercel/analytics';
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
@@ -59,12 +59,14 @@ function NavBar() {
             </li>
           </ul>
         </div>
-        <a href="https://solanahub.app">
 
-        <button className="hidden md:inline-block bg-primary justify-center rounded-lg py-3 px-5 text-center text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300">
+        <button onClick={() => {
+          window.open("https://solanahub.app")
+          va.track('redirect to app')
+          }} className="hidden md:inline-block bg-primary justify-center rounded-lg py-3 px-5 text-center text-md text-white font-semibold hover:bg-primary-800 transition-colors duration-300">
           Launch the App
         </button>
-        </a>
+      
       </div>
     </nav>
   );
