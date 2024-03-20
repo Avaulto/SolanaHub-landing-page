@@ -1,5 +1,5 @@
-import logoText from "../assets/Logo_text 1.svg";
-import peerlink from "../assets/peerlink.svg";
+// import logoText from "../assets/Logo_text 1.svg";
+// import peerlink from "../assets/peerlink.svg";
 
 // ... import other logos similarly
 
