@@ -63,13 +63,6 @@ const FeedbackSection = () => {
     animationRef.current = requestAnimationFrame(animateScroll);
   };
 
-  const cancelAnimation = () => {
-    if (animationRef.current) {
-      cancelAnimationFrame(animationRef.current);
-      animationRef.current = null;
-    }
-  };
-
   const scrollLeft = () => {
     if (!ref.current) return;
     const currentPosition = ref.current.scrollLeft;
