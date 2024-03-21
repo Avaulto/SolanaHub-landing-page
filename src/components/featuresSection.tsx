@@ -77,7 +77,7 @@ const FeaturesSection = () => {
         <h1 className="font-medium text-primary text-lg text-center">Features</h1>
       </div>
 
-      <h1 className="font-semibold text-Grey-900 text-3xl md:text-4xl text-center mb-4 md:mb-5">
+      <h1 className="font-semibold text-Gray-900 text-3xl md:text-4xl text-center mb-4 md:mb-5">
         Make your everyday task from 1 centralize location
       </h1>
       <p className="mb-16 text-center text-gray-600 max-w-sm md:max-w-3xl mx-auto">
@@ -102,7 +102,7 @@ const FeaturesSection = () => {
           className=" max-w-3xl -ml-20 " // Negative margin to create the overlap effect
         />
       </div>
-      <div className="flex w-full bg-Grey-50 md:hidden justify-center items-center relative pt-8 mb-14">
+      <div className="flex w-full bg-Gray-50 md:hidden justify-center items-center relative pt-8 mb-14">
         <motion.img
           src={MobileScreenshotSm}
           alt="mobile"
@@ -145,7 +145,7 @@ const FeaturesSection = () => {
 // Dummy functional component for feature icon, replace with actual content
 const FeatureIcon = ({ title, des, icon }: any) => (
   <div className="flex flex-col items-center max-w-80 ">
-    <div className="mb-5 flex justify-center items-center w-12 h-12 rounded-lg border-2 border-Grey-300">
+    <div className="mb-5 flex justify-center items-center w-12 h-12 rounded-lg border-2 border-Gray-300">
       <img src={icon} className="h-6" />
     </div>
     <h3 className="text-xl font-semibold mb-2 text-center">{title}</h3>

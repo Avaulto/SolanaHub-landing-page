@@ -1,9 +1,9 @@
 // import logoText from "../assets/Logo_text 1.svg";
 // import jupLogo from "../assets/jup.png";
-import tritonLogo from "../assets/triton.png"
+import tritonLogo from "../assets/triton.png";
 import sanctumLogo from "../assets/sanctum.svg";
 import realmsLogo from "../assets/realms.webp";
-import allDomainLogo from "../assets/alldomain.svg"
+import allDomainLogo from "../assets/alldomain.svg";
 import kaminoLogo from "../assets/kamino.svg";
 
 const PartnerSection = () => {
@@ -17,13 +17,16 @@ const PartnerSection = () => {
           <img src={tritonLogo} alt="tritonLogo" className="h-12 mx-auto img-dy" />
           <img src={sanctumLogo} alt="sanctumLogo" className="h-12 mx-auto img-dy" />
           <img src={realmsLogo} alt="realmsLogo" className="h-12 mx-auto img-dy" />
-          <img src={kaminoLogo} alt="kaminoLogo" style={{'mix-blend-mode': 'exclusion'} as any} className="h-12 mx-auto img-dy" />
+          <img
+            src={kaminoLogo}
+            alt="kaminoLogo"
+            style={{ "mix-blend-mode": "exclusion" } as any}
+            className="h-12 mx-auto img-dy"
+          />
           {/* Repeat for other logos */}
         </div>
       </div>
-      
     </section>
-
   );
 };
 

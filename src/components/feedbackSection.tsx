@@ -100,11 +100,11 @@ const FeedbackSection = () => {
           ))}
         </div>
       </div>
-      <button className="p-3 rounded-full border border-Grey-300 mr-8" onClick={scrollLeft}>
-        <ArrowLeft className="text-Grey-600" />
+      <button className="p-3 rounded-full border border-Gray-300 mr-8" onClick={scrollLeft}>
+        <ArrowLeft className="text-Gray-600" />
       </button>
-      <button className="p-3 rounded-full border border-Grey-300" onClick={scrollRight}>
-        <ArrowRight className="text-Grey-600" />
+      <button className="p-3 rounded-full border border-Gray-300" onClick={scrollRight}>
+        <ArrowRight className="text-Gray-600" />
       </button>
     </section>
   );
