@@ -1,4 +1,4 @@
-import logoText from "../assets/Logo_text 1.svg";
+import logoText from "../assets/Logo_text 1.png";
 import xTwitter from "../assets/icons/x-twitter.svg";
 import discord from "../assets/icons/discord.png";
 // ... import other logos similarly

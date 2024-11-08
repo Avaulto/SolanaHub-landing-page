@@ -119,10 +119,10 @@ export const UtilitiesSection = () => {
           //   transition={{ ease: "easeIn", duration: 0.7 }}
           className="text-left max-w-4xl"
         >
-          <h1 className="text-4xl text-grey-900 font-semibold mb-4 md:mb-2">
+          <h1 className="text-4xl text-Gray-900 font-semibold mb-4 md:mb-2">
             The only platform you'll ever need. Simple.
           </h1>
-          <p className="md:mb-4 text-xl text-grey-600">
+          <p className="md:mb-4 text-xl text-Gray-600">
             Explore smarter, find your way into solana best to offer all from one platform
           </p>
         </motion.div>
@@ -231,7 +231,7 @@ export const UtilitiesSection = () => {
             exit={{ opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ ease: "circInOut", duration: 1.5 }}
-            className="bg-white flex gap-2 flex-row justify-center border-grey-300 border-2 rounded-lg py-3 w-full  text-md text-grey-600 font-semibold hover:bg-grey-100 transition-colors duration-300"
+            className="bg-white flex gap-2 flex-row justify-center border-Gray-300 border-2 rounded-lg py-3 w-full  text-md text-Gray-600 font-semibold hover:bg-Gray-100 transition-colors duration-300"
           >
             <PlayCircle />
             Demo
